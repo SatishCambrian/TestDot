@@ -7,9 +7,9 @@ namespace MyApp.Namespace
     [ApiController]
     public class TestController : ControllerBase
     {
-        public string TestMethod()
+        public string TestMethod(string param="World!")
         {
-            return "Testing0";
+            return String.Concat("Hello",param) ;
         }
 
         public string Get()
