@@ -12,18 +12,33 @@ namespace MyApp.Namespace
             // String Interpolation
             return $"Sum of {num1} and {num2} is {num1+num2}.";
         }
-        public string Sub(decimal num1, decimal num2)
+        public string Subtract(decimal num1, decimal num2)
         {
             return $"Subraction between {num1} and {num2} is {num1-num2}.";
         }
 
-        public string Sub(decimal num1, decimal num2)
+        public string Multiply(decimal num1, decimal num2)
         {
-            return $"Subraction between {num1} and {num2} is {num1-num2}.";
+            return $"Multiplcation of {num1} and {num2} is {num1*num2}.";
+        }
+
+        public string Divide(decimal num1, decimal num2)
+        {
+            if(num2==0){
+                return "Cannot divide by Zero.";
+            }
+            return $"Division of {num1} by {num2} is {num1/num2}.";
+        }
+        public string Modulo(decimal num1, decimal num2)
+        {
+            if(num2==0){
+                return "Cannot divide by Zero.";
+            }
+            return $"Remainder after Division of {num1} by {num2} is {num1%num2}.";
         }
         public string Get()
         {
-            return "Get Method";
+            return "This is Calculator";
         }
     }
 }
