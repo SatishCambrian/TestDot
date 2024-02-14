@@ -39,14 +39,15 @@ public class calcUnitTest
     public void Add_FirstNumberPositiveSecondNumberNegative_ReturnsResult()
     {
         string result = calc.Add(1.0m, -2.0m);
+
         Assert.AreEqual("Sum of 1.0 and -2.0 is -1.", result);
     }
 
     public void Add_FirstNumberLarge_ReturnsResult()
     {
         string result = calc.Add(1999999999999999999999999999.5m, 2.0m);
-        Assert.AreEqual("Sum of 1999999999999999999999999999.5 and 2.0 is 200000000000000000000000000000.5.", result);
 
+        Assert.AreEqual("Sum of 1999999999999999999999999999.5 and 2.0 is 200000000000000000000000000000.5.", result);
     }
 
     // Subtract Unit Test 
@@ -54,7 +55,6 @@ public class calcUnitTest
     public void Subtract_FirstNumberBig_ReturnPositive()
     {
         decimal result = calc.Subtract(4.5m, 3.2m);
-
 
         Assert.IsTrue(result > 0, $"positive value- {result}");
     }
@@ -66,10 +66,7 @@ public class calcUnitTest
         decimal result = calc.Subtract(-1m, -3m);
         decimal result1 = calc.Subtract(-5m, -2m);
 
-
-
         Assert.IsTrue(result > 0, $"Returns a positive value,  Result {result}");
-
 
         Assert.IsFalse(result1 > 0, $"Returns a negative value,  Result {result1}");
     }
@@ -97,7 +94,6 @@ public class calcUnitTest
 
         decimal result = calc.Subtract(number, number);
 
-
         Assert.AreEqual(0m, result);
     }
 
@@ -111,8 +107,8 @@ public class calcUnitTest
 
         decimal result = calc.Multiply(num1, num2);
 
-
         Assert.AreEqual(6m, result);
+
         Assert.IsTrue(result > 0, $"Expected a positive value,  Result {result}");
     }
 
@@ -125,6 +121,7 @@ public class calcUnitTest
         decimal result = calc.Multiply(num1, num2);
 
         Assert.AreEqual(6m, result);
+
         Assert.IsTrue(result > 0, $"Expected a positive value,  Result {result}");
     }
 
@@ -149,6 +146,7 @@ public class calcUnitTest
         decimal result = calc.Multiply(num1, num2);
 
         Assert.AreEqual(-30m, result);
+        
         Assert.IsTrue(result < 0);
     }
 
