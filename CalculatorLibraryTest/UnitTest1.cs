@@ -31,23 +31,23 @@ public class calcUnitTest
 
     public void Add_ZeroWithOtherNumber_ReturnsOtherNumber()
     {
-        string result = calc.Add(0, 2.0m);
+        decimal result = calc.Add(0, 2.0m);
 
-        Assert.AreEqual("Sum of 0 and 2.0 is 2.", result);
+        Assert.AreEqual<string>("Sum of 0 and 2.0 is 2.", result.ToString());
     }
 
     public void Add_FirstNumberPositiveSecondNumberNegative_ReturnsResult()
     {
-        string result = calc.Add(1.0m, -2.0m);
+        string result = calc.Add(1.0m, -2.0m).ToString();
 
         Assert.AreEqual("Sum of 1.0 and -2.0 is -1.", result);
     }
 
     public void Add_FirstNumberLarge_ReturnsResult()
     {
-        string result = calc.Add(1999999999999999999999999999.5m, 2.0m);
+        decimal result = calc.Add(1999999999999999999999999999.5m, 2.0m);
 
-        Assert.AreEqual("Sum of 1999999999999999999999999999.5 and 2.0 is 200000000000000000000000000000.5.", result);
+        Assert.AreEqual<string>("Sum of 1999999999999999999999999999.5 and 2.0 is 200000000000000000000000000000.5.", result.ToString());
     }
 
     // Subtract Unit Test 
@@ -133,7 +133,7 @@ public class calcUnitTest
         decimal num2 = 5.5m;
 
         decimal result1 = calc.Multiply(num1, num2);
-
+    
         Assert.AreEqual(0m, result1);
     }
 
@@ -146,7 +146,7 @@ public class calcUnitTest
         decimal result = calc.Multiply(num1, num2);
 
         Assert.AreEqual(-30m, result);
-        
+
         Assert.IsTrue(result < 0);
     }
 

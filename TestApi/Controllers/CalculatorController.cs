@@ -14,12 +14,12 @@ namespace MyApp.Namespace
         }
         public string Subtract(decimal num1, decimal num2)
         {
-            return $"Subraction between {num1} and {num2} is {num1-num2}.";
+            return $"Subtraction between {num1} and {num2} is {num1-num2}.";
         }
 
         public string Multiply(decimal num1, decimal num2)
         {
-            return $"Multiplcation of {num1} and {num2} is {num1*num2}.";
+            return $"Multiplication of {num1} and {num2} is {num1*num2}.";
         }
 
         public string Divide(decimal num1, decimal num2)
